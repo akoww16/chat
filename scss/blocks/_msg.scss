@@ -1,0 +1,48 @@
+.msg {
+    position: relative;
+    max-width: 35em;
+    margin-top: 25px;
+    padding: 10px;
+    background-color: green;
+    border-radius: 4px;
+    min-height: 100px;
+
+    &::before {
+        content: "";
+        position: absolute;
+        display: block;
+        width: 0;
+        height: 0;
+        top: 0;
+        right: 100%;
+        transform: translateX(50%);
+        border-top: 20px solid green;
+        border-right: 20px solid transparent;
+        border-left: 20px solid transparent;
+        border-bottom: 20px solid transparent;
+    }
+
+    
+
+}
+.msg__2 {
+    background-color: grey;
+    border-radius: 4px;
+    max-width: 35em;
+    margin-top: 25px;
+    padding: 10px;
+    min-height: 100px;
+    
+    &::after {
+        content: "";
+        bottom: 0;
+        left: 100%;
+        width: 0;
+        height: 0;
+        border-bottom: 20px solid grey;
+        border-right: 20px solid transparent;
+        border-top: 20px solid transparent;
+        border-left: 20px solid transparent;
+        z-index: 1000;
+    }
+}
